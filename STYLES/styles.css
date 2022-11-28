@@ -3,35 +3,50 @@
    padding: 0;
 }
 
+/*index*/
+.main__index{
+   min-height:85vh ;
+   background-color: rgb(8, 8, 8);
+
+}
 .main__section{
    background-color: rgb(8, 8, 8);
-   color: rgb(31, 29, 29);
    display: flex;
    flex-direction: row;
    justify-content: space-around;
-   padding: 50px;
    flex-wrap: wrap;
-   min-height: 85vh;
    padding: 250px;
 }
-.footer__section{
-   background-color:  rgb(34, 33, 33);
-   min-height: 10vh;
-
-}
-.footer__card--title{
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 15px;
-   color: aliceblue;
-   min-height: 100;
-   text-align:center;
-   padding: 35px;
-}
+/*formularios*/
 .main__form{
    background-color:   rgb(34, 33, 33);
    display: flex;
    justify-content: center;
    min-height: 85vh;
-   padding-top: 50px;
+   padding-top: 30px;
+}
+.card__tittle{
+   color:aliceblue;
+   display: flex;
+   justify-content: start;
+   font-family: Arial,Helvetica, sans-serif;
+   font-size: 25px;
+
+
+}
+/*footer*/
+.footer__section{
+   background-color:  rgb(59, 58, 58);
+   margin: 0;
+}
+.footer__card--title{
+   font-family: Arial,Helvetica, sans-serif;
+   background-color:  rgb(59, 58, 58);
+   font-size: 15px;
+   color: aliceblue;
+   min-height:100;
+   text-align:center;
+   padding: 35px;
+   margin:0;
 
 }
