@@ -12,9 +12,9 @@
 .main__section{
    background-color: rgb(8, 8, 8);
    display: flex;
-   flex-direction: row;
+   flex-direction:row;
    justify-content: space-around;
-   flex-wrap: wrap;
+   flex-wrap:wrap;
    padding: 250px;
 }
 /*formularios*/
@@ -34,6 +34,9 @@
 
 
 }
+
+
+
 /*footer*/
 .footer__section{
    background-color:  rgb(59, 58, 58);
@@ -48,5 +51,17 @@
    text-align:center;
    padding: 35px;
    margin:0;
+
+}
+
+@media only screen and (max-width:450px) {
+   .main__section{
+      background-color: rgb(8, 8, 8);
+      display: flex;
+      flex-direction:column;
+      justify-content: space-around;
+      flex-wrap:wrap;
+      padding: 10px;
+   }
 
 }
