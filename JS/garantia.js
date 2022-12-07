@@ -19,7 +19,7 @@ class reclamo {
         NUMERO DE TELEFONO:   ${this.telefono}
         NOMBRE DEL PRODUCTO:  ${this.producto}
         NOMBRE DE LA MARCA:   ${this.marca}
-        NOMBRE DE LA MARCA:   ${this.falla}` )
+        NOMBRE DE LA FALLA:   ${this.falla}` )
     }
 }
 
@@ -27,7 +27,7 @@ const reclamo1= new reclamo(1,111111,"Sarah Ochoa",1126950698,"luly","otra marca
 const reclamo2= new reclamo(2,111111,"Isa Molina",1126950698,"joe 3","otra marca")
 const registroGarantia = [reclamo1,reclamo2]
 
-
+/*
 function garantia(){
     let fecha1 = new Date(prompt("ingrese la fecha del dia en formato mm/dd/aa")) //fecha del dia
     let fecha2 = new Date(prompt("ingrese la fecha en que recibió el producto o lo compró presencial en formato mm/dd/aa")) //fecha nueva
@@ -80,6 +80,7 @@ function buscarPorReclamo (array){
         console.log(reclamoEncontrado)
     }
 }
+*/
 
 //DOM 
 let divGarantias = document.getElementById ("garantias")
