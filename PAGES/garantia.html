@@ -71,26 +71,26 @@
                 <!--NUMERO DE PEDIDO / LOCAL EN QUE COMPRO CLIENTE  -->
         <div class="col-md-3">
           <label for="validationDefault05" class="form-label">Pedido / Local</label>
-          <input type="text" class="form-control" id="validationDefault05" required>
+          <input type="text" class="form-control" id="pedidoGarantia" required>
         </div>
                         <!--NOMBRE DEL CLIENTE  -->
 
         <div class="col-md-6">
           <label for="validationDefault03" class="form-label">Nombre del cliente</label>
-          <input type="text" class="form-control" id="validationDefault03" required>
+          <input type="text" class="form-control" id="clienteGarantia" required>
         </div>
                                 <!--NUMERO DE TELEFONO  -->
         <div class="col-md-4">
           <label for="validationDefault05" class="form-label">Número de Teléfono</label>
-          <input type="tel" class="form-control" id="validationDefault05" required>
+          <input type="tel" class="form-control" id="telefonoGarantia" required>
         </div>
                                 <!--NOMBRE DEL PRODUCTO  -->
         <div class="col-md-5">
           <label for="validationDefault03" class="form-label">Nombre del Producto</label>
-          <input type="text" class="form-control" id="validationDefault03" required>
+          <input type="text" class="form-control" id="productoGarantia" required>
                                 <!--NOMBRE DE LA MARCA  -->
         </div>       
-        <select class="form-select w-50 p-3 "  aria-label="Default select example">
+        <select class="form-select w-50 p-3 " id="marcaGarantia" aria-label="Default select example">
           <option selected>Marca del producto </option>
           <option value="1">Sex Therapy</option>
           <option value="2">Satisfyer</option>
@@ -107,11 +107,11 @@
         </select>
         <div class="mb-3 ">
           <label for="exampleFormControlTextarea1" class="form-label ">Descripción de la falla</label>
-          <textarea class="form-control w-50 p-3" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control w-50 p-3" id="fallaGarantia" rows="3"></textarea>
         </div>
         <!--BOTON QUE GUARDA -->
         <div class="col-12">
-          <button class="btn btn-primary" type="submit">Guardar</button>
+          <button class="btn btn-primary" type="submit" id="guardarGarantiaBtn">Guardar</button>
         </div>
       </form>
     </main>
