@@ -1,11 +1,11 @@
 class reclamo {
-    constructor(id, pedido, nombre, telefono, producto, marca){
+    constructor(id, pedido, nombre, telefono, producto, marca,falla){
         this.id = id,
         this.pedido = pedido,
         this.nombre = nombre,
         this.telefono = telefono,
         this.producto = producto,
-        this.marca = marca
+        this.marca = marca,
         this.falla = falla
 
     }
@@ -27,40 +27,31 @@ const reclamo2= new reclamo(2,111111,"Isa Molina",1126950698,"joe 3","otra marca
 const registroGarantia = [reclamo1,reclamo2]
 
 //DOM 
-let divGarantias = document.getElementById ("garantias")
+let divReclamos = document.getElementById ("reclamos")
 let btnGuardarGarantia = document.getElementById("guardarGarantiaBtn")
 let buscador = document.getElementById("buscador")
 let btnVerCatalogo = document.getElementById("verGarantias")
 
 function verGarantias(array){
 
-    /*
-    for(let reclamo of array){
-        console.log (`DATOS DE LA SOLICITUD DE GARANTIA:
-        Reclamo:  ${reclamo.id}
-        Pedido:   ${reclamo.pedido}
-        Cliente:  ${reclamo.nombre}
-        Teléfono: ${reclamo.telefono}
-        Producto: ${reclamo.producto}
-        Marca:    ${reclamo.marca}
-        Falla:    ${reclamo.falla}`)
-    }
-    */
-
-   divGarantias.innerHTML =  ""
+   divReclamos.innerHTML =  ""
     for (let reclamo of array){
         let nuevoReclamo = document.createElement ("div")
-        nuevoReclamo.innerHTML = `  <div id="$garantias"></div>
-        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        nuevoReclamo.innerHTML = ` 
+        <div id="${reclamo.id} class="card text-white bg-danger mb-3" style="max-width: 18rem;">
           <div class="card-header">Garantia</div>
           <div class="card-body">
-            <h5 class="card-title">Pedido</h5>
-            <p class="card-text">datos 
-            </p>
+            <h5 class="card-title">${reclamo.pedido} </h5>
+            <p class="card-text">  ${reclamo.nombre}</p>
+            <p class="card-text">  ${reclamo.telefono}</p>
+            <p class="card-text">  ${reclamo.producto}</p>
+            <p class="card-text">  ${reclamo.marca}</p>
+            <p class="card-text">  ${reclamo.falla}</p>
             <button type="button" class="btn btn-secondary">Eliminar</button>
             <button type="button" class="btn btn-light">Editar</button>
           </div>
-        </div>>`
-    }
+        </div>`
+        divReclamos.appendChild(nuevoReclamo)
 
+    }
 }

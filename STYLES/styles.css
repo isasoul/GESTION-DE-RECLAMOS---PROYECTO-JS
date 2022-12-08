@@ -22,7 +22,7 @@
    background-color:   rgb(34, 33, 33);
    display: flex;
    justify-content: center;
-   min-height: 85vh;
+   min-height: fit-content;
    padding-top: 30px;
 }
 .card__tittle{
