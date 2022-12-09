@@ -50,7 +50,7 @@ function verGarantias(array){
         let nuevoReclamo = document.createElement ("div")
         nuevoReclamo.innerHTML = ` 
         <div  class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-          <div id="${reclamo.id} class="card-header">Garantia</div>
+          <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
           <div class="card-body">
             <h5 class="card-title">${reclamo.pedido} </h5>
             <p class="card-text">  ${reclamo.nombre}</p>
