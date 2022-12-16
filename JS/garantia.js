@@ -22,9 +22,10 @@ class reclamo {
         NOMBRE DE LA FALLA:   ${this.falla}` )
     }
 }
+console.log(reclamo)
 
-const reclamo1= new reclamo(1,111111,"Sarah Ochoa",1126950698,"luly","otra marca")
-const reclamo2= new reclamo(2,111111,"Isa Molina",1126950698,"joe 3","otra marca")
+const reclamo1= new reclamo(1,111111,"Sarah Ochoa",1126950698,"luly","otra marca","no enciende")
+const reclamo2= new reclamo(2,111111,"Isa Molina",1126950698,"joe 3","otra marca","no enciende")
 
 let registroGarantia = []
 if(localStorage.getItem("registroGarantia")){
@@ -46,8 +47,8 @@ let btnVerCatalogo = document.getElementById("verGarantias")
 function verGarantias(array){
 
    divReclamos.innerHTML = ""
-    for (let reclamo of array){
-        let nuevoReclamo = document.createElement ("div")
+    for (let reclamo of array){ 
+        let nuevoReclamo = document.createElement ("div") 
         nuevoReclamo.innerHTML = ` 
         <div  class="card text-white bg-danger mb-3" style="max-width: 18rem;">
           <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
@@ -67,6 +68,7 @@ function verGarantias(array){
     }
 
 }
+
 //funcion para agregar libros :
 function cargarReclamo(array) {
     let inputPedido =  document.getElementById("pedidoInput")
@@ -90,3 +92,5 @@ function cargarReclamo(array) {
 //evento
 btnGuardarGarantia.addEventListener("click",()=>{cargarReclamo(registroGarantia)})
 verGarantias(registroGarantia)
+
+console.log(reclamo)
