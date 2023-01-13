@@ -89,5 +89,9 @@
       min-height:80vh ;
    
    }
+   .main__form{
+
+      padding-left: 50px;
+   }
 
 }
