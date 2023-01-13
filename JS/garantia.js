@@ -49,6 +49,8 @@ let divReclamos = document.getElementById ("reclamos")
 let btnGuardarGarantia = document.getElementById("guardarGarantiaBtn")
 let buscador = document.getElementById("buscador")
 let btnVerCatalogo = document.getElementById("verGarantias")
+let btnVerificarFecha = document.getElementById("verificarFechaBtn")
+
 
 function verGarantias(array){
 
@@ -145,4 +147,53 @@ function cargarReclamo(array) {
 form.addEventListener("submit",(e) => {
     e.preventDefault()
     cargarReclamo(registroGarantia)
+})
+
+/*
+function validarFecha(inputFechaDia,)
+function cambio(){
+    let fecha1 = new Date(prompt("ingrese la fecha del dia en formato mm/dd/aa")) //fecha del dia
+    let fecha2 = new Date(prompt("ingrese la fecha en que recibió el producto o lo compró presencial en formato mm/dd/aa")) //fecha nueva
+    let milisegundosdia= 24*60*60*1000
+    let milisegundosTranscurridos = Math.abs(fecha1.getTime()- fecha2.getTime())
+    let diasTranscurridos = Math.round(milisegundosTranscurridos/milisegundosdia)
+    console.log(`la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}`)
+
+    function nuevoCambio(array){
+    if( diasTranscurridos <= 30){
+    let numeroPedido = parseInt(prompt("Ingrese el número de pedido: "))
+    let nombreIngresado = prompt ("Ingrese el nombre del cliente: ")
+    let numeroTelefono = parseInt(prompt("Ingrese el número de telefono del cliente: "))
+    let nombreProducto = prompt(" Ingrese el nombre del producto: ") 
+    let nombreMarca = prompt(" Ingrese el nombre de la marca: ")
+    let cambioCreado = new reclamoCambio (array.length+1,numeroPedido,nombreIngresado,numeroTelefono,nombreProducto,nombreMarca)
+    array.push(cambioCreado)
+    console.log(array)
+}else{
+    alert("EL PRODUCTO SE ENCUENTRA FUERA DEL TIEMPO PARA CAMBIO")
+} }
+nuevoCambio(registroCambio)
+}
+console.log(registroCambio)
+*/
+function verificarFechaGarantia(){
+    let inputFechaDia = document.getElementById("fechaDiaInput").value
+    let inputFechaCompra = document.getElementById("fechaCompraInput").value
+    let milisegundosMes= 4.345*7*24*60*60*1000
+    let milisegundosTranscurridos = Math.abs(inputFechaDia.getTime()- inputFechaCompra.getTime())
+    let mesesTranscurridos = Math.round(milisegundosTranscurridos/milisegundosMes)
+    console.log(`la cantidad de días transcurridos desde la compra es: ${mesesTranscurridos}`)
+    alert(`la cantidad de días transcurridos desde la compra es: ${mesesTranscurridos}`)
+    if(mesesTranscurridos <= 6 ){
+        alert("El Producto esta dentro del tiempo de garantía")
+    }else{
+        alert("EL PRODUCTO SE ENCUENTRA FUERA DEL TIEMPO DE GARANTIA")
+    }
+    inputFechaCompra.value = ""
+    inputFechaDia.value = ""
+
+}
+btnVerificarFecha.addEventListener("submit",(e) => {
+    e.preventDefault()
+    verificarFechaGarantia()
 })
