@@ -52,65 +52,68 @@
           </nav>
     </header>
     <main class="main__form">
-      <form class="row g-3 w-75 p-3 p-3 mb-2 bg-dark text-white border border-danger" >
-        <h1 class="card__tittle"> FORMULARIO DE CAMBIO</h1>
+      <form id="form" class="row g-3 w-75 p-3 p-3 mb-2 bg-dark text-white border border-danger" >
+        <h1 class="card__tittle"> FORMULARIO DE GARANTIA</h1>
+                <!--FECHA DE COMPRA O RECEPCION --> 
+        <div class="col-md-4">
+          <label>Fecha Actual</label>
+          <input type="date" id="fechaActual" class="form-control" >
+          <label>Fecha Compra</label>
+          <input type="date" id="fechaCompra" class="form-control" >
+        </div>
 
-       <!--FECHA DEL DIA-->
-        <div class="col-md-4">
-          <label for="validationDefault01" class="form-label"> Fecha del día</label>
-          <input type="date" class="form-control" id="validationDefault01" value="Mark" required>
-        </div>
-        <!--FECHA DE COMPRA O RECEPCION -->
-        <div class="col-md-4">
-          <label for="validationDefault02" class="form-label"> Fecha de compra/recepción</label>
-          <input type="date" class="form-control" id="validationDefault02" value="Otto" required>
-        </div>
-        <!--BOTON QUE EVALUA DIAS TRANSCURRIDOS -->
+         <!--BOTON QUE EVALUA DIAS TRANSCURRIDOS-->
         <div class="col-12">
-          <button class="btn btn-primary" type="submit">Verificar</button>
+          <button class="btn btn-primary" type="submit" id="verificarFechaBtn" oninput="verificarFechaGarantia()">Verificar</button>
         </div>
+        
+   
                 <!--NUMERO DE PEDIDO / LOCAL EN QUE COMPRO CLIENTE  -->
         <div class="col-md-3">
           <label for="validationDefault05" class="form-label">Pedido / Local</label>
-          <input type="text" class="form-control" id="validationDefault05" required>
+          <input type="text" class="form-control" id="pedidoInput" required>
         </div>
+        
                         <!--NOMBRE DEL CLIENTE  -->
 
         <div class="col-md-6">
           <label for="validationDefault03" class="form-label">Nombre del cliente</label>
-          <input type="text" class="form-control" id="validationDefault03" required>
+          <input type="text" class="form-control" id="clienteInput" required>
         </div>
                                 <!--NUMERO DE TELEFONO  -->
         <div class="col-md-4">
           <label for="validationDefault05" class="form-label">Número de Teléfono</label>
-          <input type="tel" class="form-control" id="validationDefault05" required>
+          <input type="tel" class="form-control" id="telefonoInput" required>
         </div>
                                 <!--NOMBRE DEL PRODUCTO  -->
         <div class="col-md-5">
           <label for="validationDefault03" class="form-label">Nombre del Producto</label>
-          <input type="text" class="form-control" id="validationDefault03" required>
+          <input type="text" class="form-control" id="productoInput" required>
                                 <!--NOMBRE DE LA MARCA  -->
         </div>       
-        <select class="form-select w-50 p-3 "  aria-label="Default select example">
-          <option selected> Marca del producto </option>
-          <option value="1">Sex Therapy</option>
-          <option value="2">Satisfyer</option>
-          <option value="3">California</option>
-          <option value="4">Zalo</option>
-          <option value="5">Lovense</option>
-          <option value="6">Pretty Love</option>
-          <option value="7">Chisa</option>
-          <option value="8">Lovetoy</option>
-          <option value="9">XR</option>
-          <option value="10">Pipedream</option>
-          <option value="11">Tenga</option>
-          <option value="12">Otra Marca</option>
+        <select class="form-select w-50 p-3 " id="marcaInput" aria-label="Default select example">
+          <option selected>Marca del producto </option>
+          <option value="Sex Therapy">Sex Therapy</option>
+          <option value="Satisfyer">Satisfyer</option>
+          <option value="California">California</option>
+          <option value="Zalo">Zalo</option>
+          <option value="Lovense">Lovense</option>
+          <option value="Pretty Love">Pretty Love</option>
+          <option value="Chisa">Chisa</option>
+          <option value="Lovetoy">Lovetoy</option>
+          <option value="XR">XR</option>
+          <option value="Pipedream">Pipedream</option>
+          <option value="Tenga">Tenga</option>
+          <option value="Otra Marca">Otra Marca</option>
         </select>
+
+
         <!--BOTON QUE GUARDA -->
         <div class="col-12">
-          <button class="btn btn-primary" type="submit">Guardar</button>
+          <button id="guardarCambioBtn" class="btn btn-primary" type="submit">Guardar</button>
         </div>
       </form>
+      <div id="reclamos"></div>
     </main>
     <footer class="footer__section">
       <h2 class="footer__card--title">© Copyright Isabel Molina 2022</h2>

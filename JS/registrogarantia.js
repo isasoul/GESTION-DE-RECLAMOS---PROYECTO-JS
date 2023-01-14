@@ -50,28 +50,32 @@ let btnGuardarGarantia = document.getElementById("guardarGarantiaBtn")
 let buscador = document.getElementById("buscador")
 let btnVerCatalogo = document.getElementById("verGarantias")
 
+
 function verGarantias(array){
 
    divReclamos.innerHTML = ""
     for (let reclamo of array){ 
         let nuevoReclamo = document.createElement ("div") 
         nuevoReclamo.innerHTML = ` 
-        <div  class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-          <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
-          <div class="card-body">
-            <h5 class="card-title">${reclamo.pedido} </h5>
-            <p class="card-text">  ${reclamo.nombre}</p>
-            <p class="card-text">  ${reclamo.telefono}</p>
-            <p class="card-text">  ${reclamo.producto}</p>
-            <p class="card-text">  ${reclamo.marca}</p>
-            <p class="card-text">  ${reclamo.falla}</p>
-            <button type="button" class="btn btn-secondary">Eliminar</button>
-            <button type="button" class="btn btn-light">Editar</button>
-          </div>
-        </div>>`
+       <span class= "card__garantia"><div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
+       <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
+       <div class="card-body">
+         <h5 class="card-title">${reclamo.pedido} </h5>
+         <p class="card-text">  ${reclamo.nombre}</p>
+         <p class="card-text">  ${reclamo.telefono}</p>
+         <p class="card-text">  ${reclamo.producto}</p>
+         <p class="card-text">  ${reclamo.marca}</p>
+         <p class="card-text">  ${reclamo.falla}</p>
+         <button type="button" class="btn btn-secondary">Eliminar</button>
+         <button type="button" class="btn btn-light">Editar</button>
+       </div>
+     </div>>
+     </span> 
+        
+    
+      `
         divReclamos.appendChild(nuevoReclamo)
 
     }
 
 }
-
