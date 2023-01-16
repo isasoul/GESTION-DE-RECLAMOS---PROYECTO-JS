@@ -89,4 +89,32 @@ form.addEventListener("submit",(e) => {
     e.preventDefault()
     cargarCambio(registroCambio)
 })
+/*
+function cambio(){
+    let fecha1 = new Date(prompt("ingrese la fecha del dia en formato mm/dd/aa")) //fecha del dia
+    let fecha2 = new Date(prompt("ingrese la fecha en que recibió el producto o lo compró presencial en formato mm/dd/aa")) //fecha nueva
+    let milisegundosdia= 24*60*60*1000
+    let milisegundosTranscurridos = Math.abs(fecha1.getTime()- fecha2.getTime())
+    let diasTranscurridos = Math.round(milisegundosTranscurridos/milisegundosdia)
+    console.log(`la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}`)
+*/
 
+let btnVerificarFecha = document.getElementById("verificarFechaBtn")
+btnVerificarFecha.addEventListener("click", (verificarFechaCambio))
+function verificarFechaCambio() {
+    let fechaCompra = new Date(document.getElementById("fechaCompra").value);
+    let fechaActual = new Date(document.getElementById("fechaActual").value);
+    let milisegundosdia =  24 * 60 * 60 * 1000
+    let milisegundosTranscurridos = Math.abs(fechaCompra.getTime() - fechaActual.getTime())
+    let diasTranscurridos = Math.round(milisegundosTranscurridos / milisegundosdia)
+    console.log(`la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}`)
+    alert(`la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}`)
+    if (diasTranscurridos <= 30) {
+        alert("El Producto esta dentro del tiempo de cambio")
+    } else {
+        alert("EL PRODUCTO SE ENCUENTRA FUERA DEL TIEMPO PARA REALIZAR EL CAMBIO")
+    }
+    fechaCompra.value = ""
+    fechaActual.value = ""
+
+}
