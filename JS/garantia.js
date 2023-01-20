@@ -37,7 +37,6 @@ let form = document.getElementById("form")
 
 let divReclamos = document.getElementById("reclamos")
 let btnGuardarGarantia = document.getElementById("guardarGarantiaBtn")
-let buscador = document.getElementById("buscador")
 let btnVerCatalogo = document.getElementById("verGarantias")
 
 

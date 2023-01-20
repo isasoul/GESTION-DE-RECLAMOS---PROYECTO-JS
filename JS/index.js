@@ -14,3 +14,18 @@ if(usuario.toLowerCase() == "sgrbuttman" && claveIngreso == 151515){
 }
 
 // usuario = sgrbuttman / clave = 151515
+
+
+let buscador = document.getElementById("buscador")
+buscador.addEventListener("click",(buscarPorReclamo))
+function buscarPorReclamo (array){
+    let reclamoBuscado = parseInt(prompt("Ingrese el numero de reclamo que desea buscar"))
+    let reclamoEncontrado = array.find(
+        (reclamo)=>reclamo.id == reclamoBuscado
+    )
+    if (reclamoEncontrado == undefined){
+        console.log(`El reclamo numero ${reclamoBuscado} no se encuentra en el registro de garantías`)
+    }else{
+        console.log(reclamoEncontrado)
+    }
+}
