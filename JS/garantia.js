@@ -47,7 +47,7 @@ function verGarantias(array) {
     for (let reclamo of array) {
         let nuevoReclamo = document.createElement("div")
         nuevoReclamo.innerHTML = ` 
-       >
+       
                 <div class="row">        
                     <span class= "card__garantia"><div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
                         <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
@@ -58,7 +58,7 @@ function verGarantias(array) {
                                 <p class="card-text">  ${reclamo.producto}</p>
                                 <p class="card-text">  ${reclamo.marca}</p>
                                 <p class="card-text">  ${reclamo.falla}</p>
-                                <button type="button" class="btn btn-secondary">Eliminar</button>
+                                 <button type="button" class="btn btn-secondary">Eliminar</button>
                                 <button type="button" class="btn btn-light">Editar</button>
                             </div>
                         </div>>
