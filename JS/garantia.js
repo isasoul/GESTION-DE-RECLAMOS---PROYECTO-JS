@@ -40,6 +40,7 @@ let btnGuardarGarantia = document.getElementById("guardarGarantiaBtn")
 let btnVerCatalogo = document.getElementById("verGarantias")
 
 
+
 function verGarantias(array) {
 
     divReclamos.innerHTML = ""
@@ -74,6 +75,7 @@ function verGarantias(array) {
 
 }
 
+
 function cargarReclamo(array) {
     let inputPedido = document.getElementById("pedidoInput").value
     console.log(inputPedido)
@@ -85,6 +87,7 @@ function cargarReclamo(array) {
     let reclamoCreado = new reclamo(array.length + 1, inputPedido, inputNombre, inputTelefono, inputProducto, inputMarca, inputFalla)
     console.log(reclamoCreado)
     array.push(reclamoCreado)
+    
     localStorage.setItem("registroGarantia", JSON.stringify(array))
     verGarantias(array)
     console.log(array)
