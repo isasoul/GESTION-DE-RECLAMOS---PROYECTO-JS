@@ -1,7 +1,7 @@
 // SECCION DE RECLAMOS
 class reclamo {
     constructor(id, pedido, nombre, telefono, producto, marca, falla) {
-        this.id = id,
+            this.id = id,
             this.pedido = pedido,
             this.nombre = nombre,
             this.telefono = telefono,
@@ -24,8 +24,8 @@ class reclamo {
 }
 console.log(reclamo)
 
-const reclamo1 = new reclamo(1, 111111, "Sarah Ochoa", 1126950698, "luly", "otra marca", "no enciende")
-const reclamo2 = new reclamo(2, 111111, "Isa Molina", 1126950698, "joe 3", "otra marca", "no enciende")
+const reclamo1 = new reclamo(1+"G", 111111, "Sarah Ochoa", 1126950698, "luly", "otra marca", "no enciende")
+const reclamo2 = new reclamo(2+"G", 111111, "Isa Molina", 1126950698, "joe 3", "otra marca", "no enciende")
 
 
 let registroGarantia = [reclamo1, reclamo2]
@@ -84,7 +84,7 @@ function cargarReclamo(array) {
     let inputProducto = document.getElementById("productoInput").value
     let inputMarca = document.getElementById("marcaInput").value
     let inputFalla = document.getElementById("fallaInput").value
-    let reclamoCreado = new reclamo(array.length + 1, inputPedido, inputNombre, inputTelefono, inputProducto, inputMarca, inputFalla)
+    let reclamoCreado = new reclamo(array.length + 1 + "G", inputPedido, inputNombre, inputTelefono, inputProducto, inputMarca, inputFalla)
     console.log(reclamoCreado)
     array.push(reclamoCreado)
     

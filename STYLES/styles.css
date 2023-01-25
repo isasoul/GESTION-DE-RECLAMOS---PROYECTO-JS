@@ -71,7 +71,18 @@
    min-height: 80vh;
    margin: 0;
    padding: 20px;
+   display: flex;
+   flex-direction: row;
 
+}
+.section__garantia--form{
+   display: flex;
+   flex-direction: row;
+}
+
+.card__reclamo{
+   display: flex;
+   flex-direction: row;
 }
 
 @media only screen and (max-width:450px) {
