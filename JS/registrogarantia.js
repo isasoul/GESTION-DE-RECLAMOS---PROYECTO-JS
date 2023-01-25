@@ -1,10 +1,11 @@
 let divReclamos = document.getElementById("reclamos")
 const datos = JSON.parse(localStorage.getItem("registroGarantia"));
+
 console.log(datos)
 
 datos.forEach(reclamo => {
-    let divReclamos = document.createElement("div")
-    divReclamos.innerHTML= ` 
+    const datos = document.createElement("div")
+    datos.innerHTML= ` 
        
     <div class="row">        
         <span class= "card__garantia"><div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
