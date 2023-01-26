@@ -49,7 +49,7 @@ function verGarantias(array) {
         nuevoReclamo.innerHTML = ` 
        
                 <div class="row">        
-                    <span class= "card__garantia"><div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
                         <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
                             <div class="card-body">
                                 <h5 class="card-title">${reclamo.pedido} </h5>
@@ -62,7 +62,7 @@ function verGarantias(array) {
                                 <button type="button" class="btn btn-light">Editar</button>
                             </div>
                         </div>>
-                    </span>  
+                    
               
                 </div>
         
