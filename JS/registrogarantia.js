@@ -1,7 +1,10 @@
 let divReclamos = document.getElementById("reclamos")
+let  formResolucion = document.getElementById("formResolucion")
 const datos = JSON.parse(localStorage.getItem("registroGarantia"));
 
 console.log(datos)
+
+
 
 datos.forEach(reclamo => {
     const datos = document.createElement("div")
@@ -23,32 +26,32 @@ datos.forEach(reclamo => {
  
                 </div>     
                 
-                <form id="form" class="row g-3 w-75 p-3 p-3 mb-2 bg-danger text-white border border-danger" >
-                <select class="form-select w-75 p-3 " " aria-label="Default select example">
-                    <option selected>ESTADO </option>
-                    <option value="RECIBIDO">RECIBIDO</option>
-                    <option value="ENTREGADO">ENTREGADO</option>
-                    <option value="NO ENTREGADO">NO ENTREGADO</option>
+                <form id="formResolucion" class="row g-3 w-75 p-3 p-3 mb-2 bg-danger text-white border border-danger" >
+                    <select id="estado" class="form-select w-75 p-3 " " aria-label="Default select example">
+                        <option selected>ESTADO </option>
+                        <option value="RECIBIDO">RECIBIDO</option>
+                        <option value="ENTREGADO">ENTREGADO</option>
+                        <option value="NO ENTREGADO">NO ENTREGADO</option>
                     </select>
-                    <select class="form-select w-100 p-3 " " aria-label="Default select example">
-                    <option selected>RESOLUCION </option>
-                    <option value="CAMBIO POR GARANTIA">CAMBIO POR GARANTIA</option>
-                    <option value="REPARADO">REPARADO</option>
-                    <option value="EN REVISION">EN REVISION</option>
-                    <option value="FUERA DE GARANTIA">FUERA DE GARANTIA</option>
+                    <select id="resolucion"class="form-select w-100 p-3 " " aria-label="Default select example">
+                        <option selected>RESOLUCION </option>
+                        <option value="CAMBIO POR GARANTIA">CAMBIO POR GARANTIA</option>
+                        <option value="REPARADO">REPARADO</option>
+                        <option value="EN REVISION">EN REVISION</option>
+                        <option value="FUERA DE GARANTIA">FUERA DE GARANTIA</option>
                     </select>
         
                       
                 <!--BOTON QUE GUARDA -->
                 <div class="col-12">
-                  <button class="btn btn-primary" type="submit" id="guardarGarantiaBtn">Guardar</button>
+                  <button class="btn btn-primary" type="submit" id="resolucionBtn">Guardar</button>
                 </div>
               </form>
 
                 
 
 
-        </div>>
+        </div>
         
         
     </div>
@@ -56,6 +59,22 @@ datos.forEach(reclamo => {
 
 `
 divReclamos.append(datos)});
+
+let resolucionBtn = document.getElementById("resolucionBtn")
+resolucionBtn.addEventListener("submit",(e) =>{
+    e.preventDefault()
+    cargarResolucion(datos)
+})
+
+function cargarResolucion (datos){
+    let estado = document.getElementById("estado").value
+    let resolucion = document.getElementById("resolucion").value
+    estado.value=""
+    resolucion.value=""
+    resolucionModificada = [estado,resolucion]
+    resolucionModificada.concat(datos)
+}
+
 
 
 
