@@ -50,7 +50,7 @@ function verGarantias(array) {
        
                 <div class="row">        
                     <div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
-                        <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
+                            <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
                             <div class="card-body">
                                 <h5 class="card-title">${reclamo.pedido} </h5>
                                 <p class="card-text">  ${reclamo.nombre}</p>
@@ -61,9 +61,10 @@ function verGarantias(array) {
                                  <button type="button" class="btn btn-secondary">Eliminar</button>
                               
                             </div>
-                    </div>>
+                    </div>
 
-                /div>
+                
+                    </div>
         
        
 
@@ -106,6 +107,7 @@ form.addEventListener("submit", (e) => {
 
 let btnVerificarFecha = document.getElementById("verificarFechaBtn")
 btnVerificarFecha.addEventListener("click", (verificarFechaGarantia))
+
 function verificarFechaGarantia() {
     let fechaCompra = new Date(document.getElementById("fechaCompra").value);
     let fechaActual = new Date(document.getElementById("fechaActual").value);
@@ -114,7 +116,7 @@ function verificarFechaGarantia() {
     let mesesTranscurridos = Math.round(milisegundosTranscurridos / milisegundosMes)
     console.log(`la cantidad de meses transcurridos desde la compra es: ${mesesTranscurridos}`)
     alert(`la cantidad de meses transcurridos desde la compra es: ${mesesTranscurridos}`)
-    if (mesesTranscurridos <= 6) {
+    if (mesesTranscurridos <6) {
         alert("El Producto esta dentro del tiempo de garantía")
     } else {
         alert("EL PRODUCTO SE ENCUENTRA FUERA DEL TIEMPO DE GARANTIA")
