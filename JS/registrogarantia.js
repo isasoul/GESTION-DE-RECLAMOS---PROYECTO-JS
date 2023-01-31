@@ -4,8 +4,9 @@ const datos = JSON.parse(localStorage.getItem("registroGarantia"));
 
 console.log(datos)
 
+const reclamoFinal = []    
 
-
+function rendergarantias(){    
 datos.forEach(reclamo => {
     const datos = document.createElement("div")
     datos.innerHTML= ` 
@@ -15,7 +16,7 @@ datos.forEach(reclamo => {
             <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
                 <div class="card-body">
                     <h5 class="card-title">PEDIDO : ${reclamo.pedido} </h5>
-                    <p class="card-text">  NOMBRE: CLIENTE ${reclamo.nombre}</p>
+                    <p class="card-text">  NOMBRE CLIENTE: ${reclamo.nombre}</p>
                     <p class="card-text">  TELEFONO: ${reclamo.telefono}</p>
                     <p class="card-text">  PRODUCTO: ${reclamo.producto}</p>
                     <p class="card-text">  MARCA: ${reclamo.marca}</p>
@@ -44,36 +45,60 @@ datos.forEach(reclamo => {
                       
                 <!--BOTON QUE GUARDA -->
                 <div class="col-12">
-                  <button class="btn btn-primary" type="submit" id="resolucionBtn">Guardar</button>
+                  <button class=" btn-guardar btn btn-primary" type="submit" id="${reclamo.id}">Guardar</button>
                 </div>
               </form>
-
-                
-
-
         </div>
-        
-        
     </div>
-
-
 `
 divReclamos.append(datos)});
 
-let resolucionBtn = document.getElementById("resolucionBtn")
-resolucionBtn.addEventListener("submit",(e) =>{
-    e.preventDefault()
-    cargarResolucion(datos)
-})
+let resolucionBtn = document.querySelectorAll(".btn-guardar")
+console.log(resolucionBtn)
+resolucionBtn.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        cargarResolucion(e, datos);
+        })
+    })
+}
+rendergarantias()
 
-function cargarResolucion (datos){
+
+
+function cargarResolucion (e, datos){
+e.preventDefault()
+//console.log(e.target.id)
+    //console.log(e)
+   // console.log(datos)
+    const id = e.target.id
+    const reclamo = datos.find (rec => rec.id===id)
+    console.log(reclamo)
+
     let estado = document.getElementById("estado").value
+    console.log(estado)
     let resolucion = document.getElementById("resolucion").value
+    console.log(resolucion)
+
+    reclamo.estado = estado
+    reclamo.resolucion = resolucion
+
+    console.log(reclamo)
+
+    reclamoFinal.push(reclamo)
+    //localStorage.setItem("reclamoFinal", JSON.stringify(reclamo));
+
     estado.value=""
     resolucion.value=""
-    resolucionModificada = [estado,resolucion]
-    resolucionModificada.concat(datos)
+    //resolucionModificada = [estado,resolucion] 
+   // resolucionModificada.concat(datos)
+
 }
+
+
+
+
+
+
 
 
 
