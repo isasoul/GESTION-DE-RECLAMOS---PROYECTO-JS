@@ -76,7 +76,7 @@ function cargarDevolucion(array) {
     let inputTelefono = document.getElementById("telefonoInput").value
     let inputProducto = document.getElementById("productoInput").value
     let inputMarca = document.getElementById("marcaInput").value
-    let reclamoCreado = new  reclamoDevolucion (array.length+1, inputPedido,inputNombre,inputTelefono,inputProducto,inputMarca)
+    let reclamoCreado = new  reclamoDevolucion (array.length+1+"D", inputPedido,inputNombre,inputTelefono,inputProducto,inputMarca)
     console.log(reclamoCreado)
     array.push(reclamoCreado)
 
