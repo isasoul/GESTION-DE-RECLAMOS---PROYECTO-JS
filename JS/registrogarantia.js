@@ -16,7 +16,7 @@ datos.forEach(reclamo => {
             <div id="${reclamo.id} class="card-header">Garantia ${reclamo.id}</div>
                 <div class="card-body">
                     <h5 class="card-title">PEDIDO : ${reclamo.pedido} </h5>
-                    <p class="card-text">  NOMBRE CLIENTE: ${reclamo.nombre}</p>
+                    <p class="card-text">  CLIENTE: ${reclamo.nombre}</p>
                     <p class="card-text">  TELEFONO: ${reclamo.telefono}</p>
                     <p class="card-text">  PRODUCTO: ${reclamo.producto}</p>
                     <p class="card-text">  MARCA: ${reclamo.marca}</p>
@@ -45,7 +45,7 @@ datos.forEach(reclamo => {
                       
                 <!--BOTON QUE GUARDA -->
                 <div class="col-12">
-                  <button class=" btn-guardar btn btn-primary" type="submit" id="${reclamo.id} oninput = "cargarResolucion()">Guardar</button>
+                  <button class=" btn-guardar btn btn-primary" type="submit" id="${reclamo.id}" oninput="verificarFechaGarantia()">Guardar</button>
                 </div>
               </form>
         </div>
@@ -79,21 +79,20 @@ e.preventDefault()
     let resolucion = document.getElementById("resolucion").value
     console.log(resolucion)
 
-    reclamo.estado = estado
-    reclamo.resolucion = resolucion
+    reclamo.estado = estado.value
+    reclamo.resolucion = resolucion.value
 
     console.log(reclamo)
 
-    const reclamoFinal = [estado,resolucion] 
-    reclamoFinal.push(...datos)
-  
-    //localStorage.setItem("reclamoFinal", JSON.stringify(reclamo));
+
     estado.value=""
     resolucion.value=""
     //resolucionModificada = [estado,resolucion] 
    // resolucionModificada.concat(datos)
 
 }
+
+
 
 
 

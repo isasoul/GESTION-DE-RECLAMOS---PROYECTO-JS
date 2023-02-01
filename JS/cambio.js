@@ -1,3 +1,4 @@
+//SECCION DE CAMBIO
 class reclamoCambio{
     constructor(id, pedido, nombre, telefono, producto, marca){
         this.id = id,
@@ -20,9 +21,11 @@ class reclamoCambio{
         ` )
     }
 }
+console.log(reclamoCambio)
 
-const cambio1 = new reclamoCambio(1,111111,"Sarah Ochoa",1126950698,"luly","st")
-const cambio2 = new reclamoCambio(2,111111,"Isa Molina",1126950698,"joe 3","st")
+const cambio1 = new reclamoCambio(1+"C",111111,"Sarah Ochoa",1126950698,"luly","st")
+const cambio2 = new reclamoCambio(2+"C",111111,"Isa Molina",1126950698,"joe 3","st")
+
 const registroCambio= [cambio1,cambio2]
 
 console.log(registroCambio)
@@ -42,20 +45,23 @@ function verCambios(array){
     for (let reclamoCambio of array){ 
         let nuevoReclamo = document.createElement ("div") 
         nuevoReclamo.innerHTML = ` 
-       <span class= "card__garantia"><div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
-       <div id="${reclamoCambio.id} class="card-header">Cambio ${reclamoCambio.id}</div>
-       <div class="card-body">
-         <h5 class="card-title">${reclamoCambio.pedido} </h5>
-         <p class="card-text">  ${reclamoCambio.nombre}</p>
-         <p class="card-text">  ${reclamoCambio.telefono}</p>
-         <p class="card-text">  ${reclamoCambio.producto}</p>
-         <p class="card-text">  ${reclamoCambio.marca}</p>
-         <button type="button" class="btn btn-secondary">Eliminar</button>
-         <button type="button" class="btn btn-light">Editar</button>
-       </div>
-     </div>>
-     </span> 
 
+        <div class="row">  
+            <div  class=" card text-white bg-danger mb-3" style="max-width: 18rem;">
+
+                    <div id="${reclamoCambio.id} class="card-header">Cambio ${reclamoCambio.id}</div>
+                        <div class="card-body">
+                            <h5 class="card-title">${reclamoCambio.pedido} </h5>
+                            <p class="card-text">  ${reclamoCambio.nombre}</p>
+                            <p class="card-text">  ${reclamoCambio.telefono}</p>
+                            <p class="card-text">  ${reclamoCambio.producto}</p>
+                            <p class="card-text">  ${reclamoCambio.marca}</p>
+                            <button type="button" class="btn btn-secondary">Eliminar</button>
+                        </div>
+
+            </div>>
+    
+        </div>
       `
         divReclamos.appendChild(nuevoReclamo)
 
@@ -74,6 +80,7 @@ function cargarCambio(array) {
     let reclamoCreado = new  reclamoCambio (array.length+1, inputPedido,inputNombre,inputTelefono,inputProducto,inputMarca)
     console.log(reclamoCreado)
     array.push(reclamoCreado)
+
     localStorage.setItem("registroCambio",JSON.stringify(array))
     verCambios(array)
     console.log(array)
@@ -89,18 +96,11 @@ form.addEventListener("submit",(e) => {
     e.preventDefault()
     cargarCambio(registroCambio)
 })
-/*
-function cambio(){
-    let fecha1 = new Date(prompt("ingrese la fecha del dia en formato mm/dd/aa")) //fecha del dia
-    let fecha2 = new Date(prompt("ingrese la fecha en que recibió el producto o lo compró presencial en formato mm/dd/aa")) //fecha nueva
-    let milisegundosdia= 24*60*60*1000
-    let milisegundosTranscurridos = Math.abs(fecha1.getTime()- fecha2.getTime())
-    let diasTranscurridos = Math.round(milisegundosTranscurridos/milisegundosdia)
-    console.log(`la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}`)
-*/
+
 
 let btnVerificarFecha = document.getElementById("verificarFechaBtn")
 btnVerificarFecha.addEventListener("click", (verificarFechaCambio))
+
 function verificarFechaCambio() {
     let fechaCompra = new Date(document.getElementById("fechaCompra").value);
     let fechaActual = new Date(document.getElementById("fechaActual").value);
