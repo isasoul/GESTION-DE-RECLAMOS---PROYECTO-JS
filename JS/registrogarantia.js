@@ -45,7 +45,7 @@ datos.forEach(reclamo => {
                       
                 <!--BOTON QUE GUARDA -->
                 <div class="col-12">
-                  <button class=" btn-guardar btn btn-primary" type="submit" id="${reclamo.id}">Guardar</button>
+                  <button class=" btn-guardar btn btn-primary" type="submit" id="${reclamo.id} oninput = "cargarResolucion()">Guardar</button>
                 </div>
               </form>
         </div>
@@ -84,9 +84,10 @@ e.preventDefault()
 
     console.log(reclamo)
 
-    reclamoFinal.push(reclamo)
+    const reclamoFinal = [estado,resolucion] 
+    reclamoFinal.push(...datos)
+  
     //localStorage.setItem("reclamoFinal", JSON.stringify(reclamo));
-
     estado.value=""
     resolucion.value=""
     //resolucionModificada = [estado,resolucion] 
