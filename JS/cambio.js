@@ -1,4 +1,4 @@
-/*//SECCION DE CAMBIO
+//SECCION DE CAMBIO
 class reclamoCambio{
     constructor(id, pedido, nombre, telefono, producto, marca){
         this.id = id,
@@ -118,4 +118,3 @@ function verificarFechaCambio() {
     fechaActual.value = ""
 
 }
-*/

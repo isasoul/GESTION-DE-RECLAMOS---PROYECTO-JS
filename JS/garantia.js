@@ -1,4 +1,4 @@
-/*// SECCION DE GARANTIA
+// SECCION DE GARANTIA
 class reclamo {
     constructor(id, pedido, nombre, telefono, producto, marca, falla) {
             this.id = id,
@@ -127,4 +127,4 @@ function verificarFechaGarantia() {
     fechaActual.value = ""
 
 }
-*/
+

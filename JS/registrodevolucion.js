@@ -1,4 +1,4 @@
-/*let divReclamos = document.getElementById("reclamo")
+let divReclamos = document.getElementById("reclamo")
 let  formResolucion = document.getElementById("formResolucion")
 const datosDevolucion = JSON.parse(localStorage.getItem("registroDevolucion"));
 
@@ -35,4 +35,4 @@ function renderDevolucion(){
 
 }
 
-renderDevolucion()*/
+renderDevolucion()

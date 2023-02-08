@@ -1,4 +1,4 @@
-/*class reclamoDevolucion{
+class reclamoDevolucion{
     constructor(id, pedido, nombre, telefono, producto, marca){
         this.id = id,
         this.pedido = pedido,
@@ -117,4 +117,3 @@ function verificarFechaDevolucion() {
     fechaActual.value = ""
 
 }
-*/

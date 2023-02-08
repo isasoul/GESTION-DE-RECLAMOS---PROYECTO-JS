@@ -1,4 +1,4 @@
-/*//INICIO DE SESION
+//INICIO DE SESION
 let bandera = true
  while(bandera){
 let usuario = prompt("ingrese nombre de usuario")
@@ -29,4 +29,3 @@ function buscarPorReclamo (array){
         console.log(reclamoEncontrado)
     }
 }
-*/
