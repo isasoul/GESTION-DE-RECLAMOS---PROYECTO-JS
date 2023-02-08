@@ -1,4 +1,5 @@
-let divReclamos = document.getElementById("reclamos")
+
+/*let divReclamos = document.getElementById("reclamos")
 let  formResolucion = document.getElementById("formResolucion")
 const datos = JSON.parse(localStorage.getItem("registroGarantia"));
 
@@ -92,7 +93,7 @@ e.preventDefault()
 
 }
 
-
+*/
 
 
 
