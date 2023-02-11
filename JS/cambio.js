@@ -31,7 +31,7 @@ const registroCambio= [cambio1,cambio2]
 console.log(registroCambio)
 
 //DOM
-let form = document.getElementById("form")
+let formCambio = document.getElementById("formCambio")
 
 let divReclamos = document.getElementById ("reclamos")
 let btnGuardarCambio = document.getElementById("guardarCambioBtn")
@@ -92,7 +92,7 @@ function cargarCambio(array) {
     
 }
 //evento
-form.addEventListener("submit",(e) => {
+formCambio.addEventListener("submit",(e) => {
     e.preventDefault()
     cargarCambio(registroCambio)
 })

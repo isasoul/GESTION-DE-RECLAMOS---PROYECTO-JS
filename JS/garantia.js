@@ -33,9 +33,9 @@ let registroGarantia = [reclamo1, reclamo2]
 console.log(registroGarantia)
 
 //DOM
-let form = document.getElementById("form")
+let form = document.getElementById("formGarantia")
 
-let divReclamos = document.getElementById("reclamos")
+let divReclamos = document.getElementById("reclamosGarantia")
 let btnGuardarGarantia = document.getElementById("guardarGarantiaBtn")
 let btnVerCatalogo = document.getElementById("verGarantias")
 
@@ -101,7 +101,7 @@ function cargarReclamo(array) {
     inputFalla.value = ""
 }
 //evento
-form.addEventListener("submit", (e) => {
+formGarantia.addEventListener("submit", (e) => {
     e.preventDefault()
     cargarReclamo(registroGarantia)
 })

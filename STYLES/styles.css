@@ -18,22 +18,18 @@
    flex-wrap:wrap;
    padding: 250px;
 }
-.div_login{
-   position: fixed;
-   padding: 250;
-   background-color: rgb(59, 58, 58);
 
-}
 .form_login{
-   background-color: rgb(59, 58, 58);
    color:white;
-   width: 30rem;
-   margin-left: 350px;
    position: absolute ;
-   padding-top: 50px;
    z-index: 1000; 
-   margin-top: 150px;
+   background-color: rgb(97, 95, 95);
+   margin-left: 35%;
+   
+}
 
+.boton_login{
+   padding: 10px;
 }
 /*formularios*/
 .main__form{
