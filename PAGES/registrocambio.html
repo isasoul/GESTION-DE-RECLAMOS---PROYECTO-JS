@@ -10,6 +10,7 @@
 
 </head>
 <body>
+  <!--NAVEGADOR MENU PRINCIPAL -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
@@ -40,8 +41,8 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
                   </li>
-
                 </ul>
+                <!--BOTON DE BUSQUEDA -->
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
@@ -51,10 +52,21 @@
           </nav>
 
     </header>  
-    <main>
-      <div id="reclamos"></div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!--PAGINA DE CARDS CON LOS DATOS DE LOS RECLAMOS --> 
+
+    <h1 class="main__tittle--garantia">Registro De Cambio</h1>
+    <section class="section__garantia">
+      <div class="card__reclamo" id="reclamos"></div>
+    </section>
+
+   <!--FOOTER --> 
+
+   <footer class="footer__section">
+    <h2 class="footer__card--title">© Copyright Isabel Molina 2022</h2>
+  </footer>
+      
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="../JS/registrocambio.js"></script>
 </body>
 </html>
