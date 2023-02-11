@@ -1,31 +1,45 @@
-//INICIO DE SESION
-let bandera = true
- while(bandera){
-let usuario = prompt("ingrese nombre de usuario")
-let claveIngreso = parseInt(prompt("ingrese contraseña"))
-
-if(usuario.toLowerCase() == "sgrbuttman" && claveIngreso == 151515){
-    console.log("bienvenido al Sistema de Gestión de Reclamos");
-    alert("bienvenido al Sistema de Gestión de Reclamos");
-    bandera =false;
-}else{
-    alert("los datos ingresados son incorrectos");
-}
-}
-
-// usuario = sgrbuttman / clave = 151515
-
-
-let buscador = document.getElementById("buscador")
-buscador.addEventListener("click",(buscarPorReclamo))
-function buscarPorReclamo (array){
-    let reclamoBuscado = parseInt(prompt("Ingrese el numero de reclamo que desea buscar"))
-    let reclamoEncontrado = array.find(
-        (reclamo)=>reclamo.id == reclamoBuscado
-    )
-    if (reclamoEncontrado == undefined){
-        console.log(`El reclamo numero ${reclamoBuscado} no se encuentra en el registro de garantías`)
-    }else{
-        console.log(reclamoEncontrado)
+// Función para iniciar sesión
+function login() {
+    // Obtener valores de nombre de usuario y contraseña del formulario
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+  
+    // Supongamos que aquí tenemos una lista de usuarios y contraseñas válidos
+    let validCredentials = [
+      { username: "user1", password: "pass1" },
+      { username: "user2", password: "pass2" },
+      { username: "user3", password: "pass3" }
+    ];
+  
+    // Verificar si el nombre de usuario y la contraseña son válidos
+    let isValid = false;
+    for (let i = 0; i < validCredentials.length; i++) {
+      if (username === validCredentials[i].username && password === validCredentials[i].password) {
+        isValid = true;
+        break;
+      }
     }
-}
+  
+    // Si el inicio de sesión es exitoso
+    if (isValid) {
+      Toastify({
+        text: "Inicio de sesión exitoso!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: 'right',
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)"
+      }).showToast();
+    } else {
+      // Si el inicio de sesión falla, mostrar un mensaje de error
+      Toastify({
+        text: "Usuario o contraseña incorrectos",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: 'right',
+        backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)"
+      }).showToast();
+    }
+  }
+  
