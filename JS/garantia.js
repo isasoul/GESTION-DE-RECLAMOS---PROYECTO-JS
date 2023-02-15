@@ -117,14 +117,57 @@ function verificarFechaGarantia() {
     let milisegundosTranscurridos = Math.abs(fechaCompra.getTime() - fechaActual.getTime())
     let mesesTranscurridos = Math.round(milisegundosTranscurridos / milisegundosMes)
     console.log(`la cantidad de meses transcurridos desde la compra es: ${mesesTranscurridos}`)
-    alert(`la cantidad de meses transcurridos desde la compra es: ${mesesTranscurridos}`)
-    if (mesesTranscurridos <6) {
-        alert("El Producto esta dentro del tiempo de garantía")
-    } else {
-        alert("EL PRODUCTO SE ENCUENTRA FUERA DEL TIEMPO DE GARANTIA")
-    }
+    if (mesesTranscurridos<6) {
+        Toastify({
+          text: `la cantidad de meses transcurridos desde la compra es: ${mesesTranscurridos}
+           el producto se encuentra dentro del tiempo de garantía`,
+          duration: 5000,
+          close: true,
+          gravity: "top",
+          position: 'center',
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)"
+        }).showToast();
+
+     }else if(mesesTranscurridos>=6){
+        Toastify({
+            text: `la cantidad de meses transcurridos desde la compra es: ${mesesTranscurridos}
+            el producto se encuentra FUERA GARANTIA `,
+            duration: 5000,
+            close: true,
+            gravity: "top",
+            position: 'center',
+            backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)"
+          }).showToast();
+    
+     }
+
+     }
+
+    
     fechaCompra.value = ""
     fechaActual.value = ""
+    
+  
 
-}
-
+ 
+/*
+if (isValid) {
+    Toastify({
+      text: "Inicio de sesión exitoso!",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: 'right',
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)"
+    }).showToast();
+  } else {
+    // Si el inicio de sesión falla, mostrar un mensaje de error
+    Toastify({
+      text: "Usuario o contraseña incorrectos",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: 'right',
+      backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)"
+    }).showToast();
+  }*/

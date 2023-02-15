@@ -108,12 +108,29 @@ function verificarFechaCambio() {
     let milisegundosTranscurridos = Math.abs(fechaCompra.getTime() - fechaActual.getTime())
     let diasTranscurridos = Math.round(milisegundosTranscurridos / milisegundosdia)
     console.log(`la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}`)
-    alert(`la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}`)
-    if (diasTranscurridos <= 30) {
-        alert("El Producto esta dentro del tiempo de cambio")
-    } else {
-        alert("EL PRODUCTO SE ENCUENTRA FUERA DEL TIEMPO PARA REALIZAR EL CAMBIO")
-    }
+    if (diasTranscurridos<30) {
+        Toastify({
+          text: `la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}
+           el producto se encuentra dentro del tiempo de cambio`,
+          duration: 5000,
+          close: true,
+          gravity: "top",
+          position: 'center',
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)"
+        }).showToast();
+
+     }else if(diasTranscurridos>=30){
+        Toastify({
+            text: `la cantidad de días transcurridos desde la compra es: ${diasTranscurridos}
+            el producto se encuentra FUERA DEL TIEMPO DE CAMBIO `,
+            duration: 5000,
+            close: true,
+            gravity: "top",
+            position: 'center',
+            backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)"
+          }).showToast();
+    
+     }
     fechaCompra.value = ""
     fechaActual.value = ""
 
