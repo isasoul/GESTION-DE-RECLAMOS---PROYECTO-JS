@@ -56,7 +56,6 @@ function verCambios(array){
                             <p class="card-text">  ${reclamoCambio.telefono}</p>
                             <p class="card-text">  ${reclamoCambio.producto}</p>
                             <p class="card-text">  ${reclamoCambio.marca}</p>
-                            <button type="button" class="btn btn-secondary">Eliminar</button>
                         </div>
 
             </div>>

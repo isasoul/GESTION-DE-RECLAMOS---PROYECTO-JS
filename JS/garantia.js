@@ -60,7 +60,6 @@ function verGarantias(array) {
                                     <p class="card-text">  ${reclamo.producto}</p>
                                     <p class="card-text">  ${reclamo.marca}</p>
                                     <p class="card-text">  ${reclamo.falla}</p>
-                                    <button type="button" class="btn btn-secondary">Eliminar</button>
                                 
                                 </div>
                     </div>

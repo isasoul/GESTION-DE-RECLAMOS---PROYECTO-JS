@@ -1,4 +1,6 @@
 // Función para iniciar sesión
+
+
 function login() {
     // Obtener valores de nombre de usuario y contraseña del formulario
     const username = document.getElementById("username").value;
@@ -42,6 +44,7 @@ function login() {
         backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)"
       }).showToast();
     }
+    
     
     function menu(){
       if (isValid){

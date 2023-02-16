@@ -55,7 +55,6 @@ function verDevoluciones(array){
                         <p class="card-text">  ${reclamoDevolucion.telefono}</p>
                         <p class="card-text">  ${reclamoDevolucion.producto}</p>
                         <p class="card-text">  ${reclamoDevolucion.marca}</p>
-                        <button type="button" class="btn btn-secondary">Eliminar</button>
                     </div>
 
         </div>

@@ -24,7 +24,6 @@ datos.forEach(reclamo => {
                     <p class="card-text">  FALLA: ${reclamo.falla}</p>
                     
                     
-                     <button type="button" class="btn btn-secondary">Eliminar</button>
  
                 </div>     
                 

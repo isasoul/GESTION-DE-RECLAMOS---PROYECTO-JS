@@ -23,7 +23,6 @@ function renderCambios(){
                         <p class="card-text">  MARCA: ${reclamoCambio.marca}</p>
                         
                         
-                         <button type="button" class="btn btn-secondary">Eliminar</button>
      
                     </div>     
                           

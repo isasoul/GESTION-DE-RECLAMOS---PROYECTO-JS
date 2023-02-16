@@ -23,7 +23,6 @@ function renderDevolucion(){
                         <p class="card-text">  MARCA: ${reclamoDevolucion.marca}</p>
                         
                         
-                         <button type="button" class="btn btn-secondary">Eliminar</button>
      
                     </div>     
                           
