@@ -82,34 +82,3 @@ function login() {
 
   }
 
-  function menu(){
-    if (isValid){
-        let mainMenu = document.createElement("div");
-        mainMenu.innerHTML= ` 
-         <main class="main__index">
-        <section class="main__section">
-              <div class="card text-bg-dark p-3 border border-danger text-center " >
-                <div class="card-body">
-                  <h5 class="card-title text-center tittle__size">GARANTIAS</h5>
-                  <a href="./PAGES/garantia.html" class="btn btn-danger text-bg-danger p-3 text-center ">INGRESAR SOLICITUD</a>
-                </div>
-              </div>
-              <div class="card text-bg-dark p-3 border border-danger text-center " >
-                <div class="card-body ">
-                  <h5 class="card-title text-center">CAMBIOS</h5>
-                  <a href="./PAGES/cambio.html" class="btn btn-danger text-bg-danger p-3 text-center  ">INGRESAR SOLICITUD</a>
-                </div>
-              </div>
-              <div class="card text-bg-dark p-3 border border-danger text-center " >
-                <div class="card-body ">
-                  <h5 class="card-title text-center">DEVOLUCIONES</h5>
-                  <a href="./PAGES/devolucion.html" class="btn btn-danger text-bg-danger p-3 text-center ">INGRESAR SOLICITUD</a>
-                </div>
-              </div>
-        </section>
-     </main>
-     ` 
-      document.body.append(mainMenu);
-    }
-  }
-  menu()
