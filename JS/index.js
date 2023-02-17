@@ -85,5 +85,22 @@ function login() {
 
   }
 
-
+  function getWeather() {
+    const apiKey = '6589ef6605b33c5bcb13d27216591844';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
+  
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const weatherElement = document.getElementById('weather');
+        const weatherHTML = `
+          <h2>Weather in ${data.name}</h2>
+          <p>Temperature: ${data.main.temp} &#8451;</p>
+          <p>Weather: ${data.weather[0].description}</p>
+        `;
+        weatherElement.innerHTML = weatherHTML;
+      })
+      .catch(error => console.error(error));
+  }
+  
   
