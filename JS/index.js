@@ -50,6 +50,42 @@ function login() {
       if (isValid){
           let mainMenu = document.createElement("div");
           mainMenu.innerHTML= ` 
+          <header>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">GESTION DE RECLAMOS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+-                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./PAGES/garantia.html">Nueva Garantia</a></li>
+                      <li><a class="dropdown-item" href="./PAGES/registrogarantia.html">Ver todas las garantías</a></li>
+                      <li><a class="dropdown-item" href="./PAGES/cambio.html">Nuevo Cambio </a></li>
+                      <li><a class="dropdown-item" href="./PAGES/registrocambio.html">Ver todos los cambios</a></li>
+                      <li><a class="dropdown-item" href="./PAGES/devolucion.html ">Nueva Devolución</a></li>
+                      <li><a class="dropdown-item" href="./PAGES/registrodevolucion.html">Ver todas las devoluciones</a></li>
+                      <li><a class="dropdown-item" href="./PAGES/maps.html">Buscar dirección en Google Maps</a></li>
+
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="https://www.buttman.com.ar/politica-de-cambios" target="_blank">Política de Cambios, Devoluciones y Garantías
+                      </a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+
+    </header>
            <main class="main__index">
           <section class="main__section">
                 <div class="card text-bg-dark p-3 border border-danger text-center " >

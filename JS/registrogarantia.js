@@ -51,6 +51,7 @@ datos.forEach(reclamo => {
         </div>
     </div>
 `
+
 divReclamos.append(datos)});
 
 let resolucionBtn = document.querySelectorAll(".btn-guardar")
@@ -60,6 +61,8 @@ resolucionBtn.forEach(btn => {
         cargarResolucion(e, datos);
         })
     })
+
+
 }
 rendergarantias()
 
